@@ -1,0 +1,318 @@
+/* Money Flow — Rechtliches.
+   Dieselben Schriften und Farben wie die App: Instrument Serif für die Titel,
+   Instrument Sans für alles, was man liest. */
+
+:root {
+  --grund: #F7F5F1;
+  --karte: #EFEBE5;
+  --karte-stark: #E5DFD6;
+  --linie: #E0DAD1;
+  --text: #1C1C1A;
+  --leise: #6F6A63;
+  --akzent: #14453D;
+  --akzent-hell: #E3F0EC;
+  --warm: #B4532A;
+
+  --serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --sans: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --grund: #141412;
+    --karte: #1E1E1A;
+    --karte-stark: #2A2A24;
+    --linie: #2E2E28;
+    --text: #F3F0EA;
+    --leise: #A19B91;
+    --akzent: #8FD8C4;
+    --akzent-hell: #17322C;
+    --warm: #E08A5F;
+  }
+}
+:root[data-theme="dark"] {
+  --grund: #141412;
+  --karte: #1E1E1A;
+  --karte-stark: #2A2A24;
+  --linie: #2E2E28;
+  --text: #F3F0EA;
+  --leise: #A19B91;
+  --akzent: #8FD8C4;
+  --akzent-hell: #17322C;
+  --warm: #E08A5F;
+}
+
+* { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  padding: 0 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.seite { max-width: 44rem; margin: 0 auto; padding: 2rem 0 5rem; }
+
+/* ── Wechsel zwischen den Dokumenten ──────────────────────────────────────── */
+
+.blaetter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 3rem;
+}
+.blaetter a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--leise);
+  background: var(--karte);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.blaetter a:hover { background: var(--karte-stark); color: var(--text); }
+.blaetter a[aria-current="page"] { color: var(--akzent); background: var(--akzent-hell); }
+
+/* ── Kopf ─────────────────────────────────────────────────────────────────── */
+
+header { margin-bottom: 2.5rem; }
+.marke {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--akzent);
+  margin-bottom: 0.875rem;
+}
+h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 9vw, 3.75rem);
+  line-height: 1.05;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.015em;
+}
+.stand {
+  color: var(--leise);
+  font-size: 0.875rem;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Der Absatz direkt unter dem Titel — etwas größer als der Fließtext. */
+.vorspann {
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: var(--leise);
+  margin: 0 0 2rem;
+}
+
+/* ── Inhaltsverzeichnis ───────────────────────────────────────────────────── */
+
+nav.inhalt {
+  background: var(--karte);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin: 0 0 3.5rem;
+}
+nav.inhalt p {
+  margin: 0 0 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--leise);
+}
+nav.inhalt ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+  columns: 2;
+  column-gap: 2rem;
+}
+nav.inhalt li {
+  counter-increment: toc;
+  margin-bottom: 0.45rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  break-inside: avoid;
+}
+/* Die Nummer steht neben dem Text, nicht davor: bricht der Titel um, bleibt
+   die zweite Zeile beim Text statt unter die Ziffer zu rutschen. */
+nav.inhalt li a {
+  display: flex;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+nav.inhalt li a:hover span { text-decoration: underline; }
+nav.inhalt li a::before {
+  content: counter(toc) ".";
+  flex: 0 0 1.1rem;
+  color: var(--leise);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 36rem) { nav.inhalt ol { columns: 1; } }
+
+/* ── Text ─────────────────────────────────────────────────────────────────── */
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 3.25rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--linie);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.5rem;
+  letter-spacing: 0.005em;
+}
+p { margin: 0 0 1rem; }
+ul, ol.liste { margin: 0 0 1rem; padding-left: 1.2rem; }
+li { margin-bottom: 0.5rem; }
+li::marker { color: var(--leise); }
+strong { font-weight: 600; }
+em { font-style: normal; color: var(--akzent); font-weight: 500; }
+
+a {
+  color: var(--akzent);
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.06em;
+}
+a:focus-visible, .blaetter a:focus-visible {
+  outline: 2px solid var(--akzent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Karten und Hervorhebungen ────────────────────────────────────────────── */
+
+.karte {
+  background: var(--karte);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.karte > :last-child { margin-bottom: 0; }
+.karte address { font-style: normal; line-height: 1.8; }
+
+/* Die eine Aussage, die man mitnehmen soll, wenn man nur eine mitnimmt. */
+.kernsatz {
+  background: var(--akzent-hell);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.kernsatz > :last-child { margin-bottom: 0; }
+.kernsatz strong { color: var(--akzent); }
+
+.hinweis {
+  border-left: 2px solid var(--karte-stark);
+  padding-left: 1.25rem;
+  color: var(--leise);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+.hinweis > :last-child { margin-bottom: 0; }
+
+/* Was ausdrücklich NICHT gilt — die Abgrenzung. */
+.abgrenzung {
+  background: var(--karte);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.abgrenzung > :last-child { margin-bottom: 0; }
+.abgrenzung ul { list-style: none; padding-left: 0; }
+.abgrenzung li { position: relative; padding-left: 1.75rem; }
+.abgrenzung li::before {
+  content: "×";
+  position: absolute;
+  left: 0.3rem;
+  top: -0.05rem;
+  color: var(--warm);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* ── Tabellen ─────────────────────────────────────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 1.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+th, td {
+  text-align: left;
+  padding: 0.85rem 0.75rem 0.85rem 0;
+  border-bottom: 1px solid var(--linie);
+  vertical-align: top;
+}
+th {
+  font-weight: 600;
+  color: var(--leise);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.5rem;
+}
+td:first-child { font-weight: 600; padding-right: 1.5rem; }
+tr:last-child td { border-bottom: 0; }
+
+@media (max-width: 36rem) {
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  tr { border-bottom: 1px solid var(--linie); padding: 0.85rem 0; }
+  tr:last-child { border-bottom: 0; }
+  td { border: 0; padding: 0; }
+  td:first-child { padding-right: 0; margin-bottom: 0.15rem; }
+  td + td { color: var(--leise); }
+}
+
+/* ── Fuß ──────────────────────────────────────────────────────────────────── */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--linie);
+  color: var(--leise);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+footer a { color: var(--leise); }
+footer a:hover { color: var(--text); }
+
+/* ── Gedruckt ─────────────────────────────────────────────────────────────── */
+
+@media print {
+  :root { --grund: #fff; --karte: #fff; --text: #000; --leise: #444; --linie: #ccc; --akzent-hell: #fff; }
+  body { font-size: 10.5pt; padding: 0; }
+  .blaetter, nav.inhalt { display: none; }
+  .karte, .kernsatz, .abgrenzung { border: 1px solid #ccc; padding: 0.75rem 1rem; }
+  h2 { page-break-after: avoid; }
+  a { text-decoration: none; color: #000; }
+}
