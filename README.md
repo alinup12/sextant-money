@@ -1,14 +1,14 @@
-# Money Flow — Rechtliches
+# Sextant Money — Rechtliches
 
-Datenschutzerklärung, AGB und Impressum der App **Money Flow**, einer App zur
+Datenschutzerklärung, AGB und Impressum der App **Sextant Money**, einer App zur
 Haushaltsführung für iOS.
 
 Veröffentlicht über GitHub Pages:
 
-- Übersicht — <https://alinup12.github.io/moneyflow-app/>
-- Datenschutz — <https://alinup12.github.io/moneyflow-app/datenschutz.html>
-- AGB — <https://alinup12.github.io/moneyflow-app/agb.html>
-- Impressum — <https://alinup12.github.io/moneyflow-app/impressum.html>
+- Übersicht — <https://alinup12.github.io/sextant-money/>
+- Datenschutz — <https://alinup12.github.io/sextant-money/datenschutz.html>
+- AGB — <https://alinup12.github.io/sextant-money/agb.html>
+- Impressum — <https://alinup12.github.io/sextant-money/impressum.html>
 
 Die Datenschutz-Adresse ist die, die in App Store Connect als Privacy Policy URL
 hinterlegt wird.
