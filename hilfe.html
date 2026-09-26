@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sextant Money – Hilfe</title>
+<meta name="description" content="Hilfe und Support für die App Sextant Money: erste Schritte, Konten verbinden, CSV-Import, Sextant Plus kündigen, Daten exportieren, Konto löschen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="stil.css">
+<style>
+  /* Der Weg durch die App — „Konto → Datenexport". Damit die Schritte nicht
+     wie Fließtext gelesen werden, obwohl man sie abtippen soll. */
+  .pfad {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--akzent);
+    background: var(--akzent-hell);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+  }
+  .inhalt { display: flex; flex-wrap: wrap; gap: 0.375rem; margin: 0 0 3rem; }
+  .inhalt a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--karte);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.15s ease;
+  }
+  .inhalt a:hover { background: var(--karte-stark); }
+</style>
+</head>
+<body>
+<div class="seite">
+
+<div class="blaetter">
+  <a href="hilfe.html" aria-current="page">Hilfe</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="agb.html">AGB</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+
+<header>
+  <span class="marke">Sextant Money</span>
+  <h1>Hilfe</h1>
+  <p class="stand">Stand 26. September 2026</p>
+</header>
+
+<p class="vorspann">Hier stehen die Fragen, die am Anfang am häufigsten kommen. Wenn
+deine nicht dabei ist, schreib einfach — die Adresse steht
+<a href="#kontakt">ganz unten</a>, und es antwortet ein Mensch.</p>
+
+<div class="inhalt">
+  <a href="#anfang">Erste Schritte</a>
+  <a href="#buchungen">Buchungen</a>
+  <a href="#konten">Konten &amp; Bank</a>
+  <a href="#plus">Sextant Plus</a>
+  <a href="#sicherheit">Sicherheit</a>
+  <a href="#daten">Deine Daten</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
+
+<h2 id="anfang">Erste Schritte</h2>
+
+<h3>Ich habe mich angemeldet — was jetzt?</h3>
+<p>Am schnellsten geht es mit den Demodaten: ein erfundener Haushalt mit einem Jahr
+Buchungen, an dem sich alles ausprobieren lässt, ohne dass du erst etwas eintippst. Du
+findest sie unter <span class="pfad">Konto → Demodaten</span>. Der Schalter blendet sie
+ein und aus; deine eigenen Zahlen bleiben davon unberührt und vermischen sich nie mit
+den erfundenen.</p>
+<p>Wenn du genug gesehen hast, entfernst du den Demobestand auf derselben Seite wieder.</p>
+
+<h3>Brauche ich ein Konto, um die App zu benutzen?</h3>
+<p>Ja. Deine Daten liegen serverseitig, damit dieselbe Auswertung am Telefon und im
+Browser herauskommt und nichts verloren geht, wenn das Gerät kaputtgeht. Anmelden kannst
+du dich mit <strong>Apple</strong>, <strong>Google</strong> oder
+<strong>E-Mail und Passwort</strong>.</p>
+
+<h2 id="buchungen">Buchungen und Kategorien</h2>
+
+<h3>Wie kommen meine Ausgaben hinein?</h3>
+<p>Auf drei Wegen, und sie schließen sich nicht aus:</p>
+<ul>
+  <li><strong>Von Hand</strong> — über das Plus in der Buchungsliste. Für Bargeld ist
+      das ohnehin der einzige Weg.</li>
+  <li><strong>Als CSV</strong> — der Export deiner Bank, im Online-Banking meist unter
+      „Umsätze exportieren“. Das kostet nichts und ist in
+      <a href="#csv">jedem Tarif</a> dabei.</li>
+  <li><strong>Automatisch über die Bankanbindung</strong> — siehe
+      <a href="#plus">Sextant Plus</a>.</li>
+</ul>
+
+<h3>Warum sind manche Buchungen schon einsortiert?</h3>
+<p>Weil Sextant sich merkt, was du beim letzten Mal mit einem ähnlichen Namen gemacht
+hast. Was die App vorschlägt, kannst du immer überschreiben — und wenn du willst, machst
+du daraus unter <span class="pfad">Automatisieren</span> eine Regel, die künftig ohne
+Rückfrage gilt.</p>
+
+<h3>Eine Buchung ist doppelt drin.</h3>
+<p>Das passiert, wenn dieselbe CSV zweimal importiert wurde. Sextant erkennt Dubletten
+über Bankreferenz und Betrag und lässt sie beim Import aus — verlässlich nur, wenn die
+Datei eine Referenz mitbringt. Was durchrutscht, löschst du in der Buchungsliste durch
+Wischen nach links.</p>
+
+<h2 id="konten">Konten und Bankanbindung</h2>
+
+<h3 id="csv">Was kostet der CSV-Import?</h3>
+<p>Nichts. Er ist Teil der App und bleibt es.</p>
+
+<h3>Wie verbinde ich mein Girokonto?</h3>
+<p>Unter <span class="pfad">Konten → Konto verbinden</span>. Du wählst deine Bank, wirst
+zur Anmeldung deiner Bank weitergeleitet und gibst die Freigabe dort. Deine
+Bank-Zugangsdaten tippst du <strong>immer bei deiner Bank</strong> ein, nie in Sextant —
+wir sehen sie nicht.</p>
+
+<div class="abgrenzung">
+  <p>Was die Bankanbindung <strong>nicht</strong> kann:</p>
+  <ul>
+    <li><strong>Geld bewegen.</strong> Der Zugriff ist rein lesend. Sextant kann keine
+        Überweisung auslösen, auch nicht versehentlich.</li>
+    <li><strong>Dauerhaft ohne dich weiterlaufen.</strong> Eine Freigabe gilt nach
+        EU-Recht maximal 180 Tage; danach bestätigst du sie erneut.</li>
+    <li><strong>Deine Zugangsdaten speichern.</strong> Es gibt keine Stelle in Sextant,
+        an der sie ankommen.</li>
+  </ul>
+</div>
+
+<h3>Wie trenne ich die Verbindung wieder?</h3>
+<p>Unter <span class="pfad">Konten → Konto → Verbindung trennen</span>. Die schon
+geholten Buchungen bleiben dir erhalten — es kommen nur keine neuen mehr nach. Zusätzlich
+kannst du die Freigabe jederzeit direkt bei deiner Bank widerrufen.</p>
+
+<h3>Es kommen keine neuen Buchungen.</h3>
+<p>Drei Ursachen, in der Reihenfolge, in der sie vorkommen:</p>
+<ul>
+  <li>Die <strong>180 Tage sind abgelaufen</strong>. Dann steht es am Konto, und ein
+      Tipp erneuert die Freigabe.</li>
+  <li>Die Bank hat die Buchung <strong>noch nicht freigegeben</strong>. Vorgemerkte
+      Umsätze liefern nicht alle Banken; spätestens am nächsten Bankarbeitstag sind sie
+      da.</li>
+  <li>Das <strong>Abo ist abgelaufen</strong>. Ohne Plus ruht die Anbindung, die
+      Verbindung selbst bleibt aber bestehen.</li>
+</ul>
+
+<h2 id="plus">Sextant Plus</h2>
+
+<h3>Was ist in Plus drin?</h3>
+<p>Die <strong>Bankanbindung für bis zu zwei Girokonten</strong>: Umsätze kommen von
+selbst, jeden Tag, und werden gleich einsortiert. Sonst schaltet Plus nichts frei — alles
+andere in Sextant ist ohne Abo vollständig nutzbar.</p>
+
+<h3>Was kostet es?</h3>
+<p>Es gibt ein monatliches und ein jährliches Abo; das jährliche ist günstiger als zwölf
+Einzelmonate. Den aktuellen Preis für dein Land zeigen die App unter
+<span class="pfad">Konto → Sextant Plus</span> und die App-Store-Seite — dort steht er
+in deiner Währung, und dort stimmt er auch dann noch, wenn diese Seite älter ist.</p>
+<p>Ein Abo verlängert sich automatisch, bis du es kündigst. Abgerechnet wird über deine
+Apple-ID.</p>
+
+<h3 id="kuendigen">Wie kündige ich?</h3>
+<p>Abos laufen über Apple, deshalb kündigst du sie bei Apple — und zwar von überall
+gleich:</p>
+<ul>
+  <li>In der App: <span class="pfad">Konto → Deine Mitgliedschaft → Abo verwalten</span></li>
+  <li>Oder am Gerät: <strong>Einstellungen → dein Name → Abonnements → Sextant
+      Money</strong></li>
+  <li>Oder im Browser: <a href="https://apps.apple.com/account/subscriptions">apps.apple.com/account/subscriptions</a></li>
+</ul>
+<p>Die Kündigung wirkt zum Ende des bezahlten Zeitraums — bis dahin läuft Plus weiter.
+Um Rückerstattungen kümmert sich Apple, nicht wir:
+<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h3>Ich habe Plus gekauft, aber die App zeigt es nicht.</h3>
+<p>Tipp auf <strong>Käufe wiederherstellen</strong> unten auf der Plus-Seite. Das hilft
+vor allem auf einem neuen Gerät. Wenn es dann noch fehlt: prüfe, ob du in
+<strong>Einstellungen → dein Name</strong> mit derselben Apple-ID angemeldet bist, mit
+der du gekauft hast.</p>
+
+<h2 id="sicherheit">Sicherheit</h2>
+
+<h3>Kann ich die App sperren?</h3>
+<p>Ja, unter <span class="pfad">Konto → Sextant schützen</span>: mit
+<strong>Face ID</strong> oder <strong>Touch ID</strong> und einer PIN als Rückfallebene.
+Danach fragt die App beim Öffnen nach — praktisch, wenn jemand anderes das Telefon in
+die Hand nimmt.</p>
+
+<h3>Wer kann meine Zahlen sehen?</h3>
+<p>Nur du. Die Daten sind in der Datenbank an dein Konto gebunden, und die Trennung
+erzwingt die Datenbank selbst, nicht erst die App. Einzelheiten stehen in der
+<a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+<h2 id="daten">Deine Daten</h2>
+
+<h3>Wie komme ich wieder heraus?</h3>
+<p>Über <span class="pfad">Konto → Datenexport</span>. Du bekommst deine Buchungen als
+CSV — dieselbe Form, in der du sie importieren kannst, also auch in jedes
+Tabellenprogramm.</p>
+
+<h3>Wie lösche ich mein Konto?</h3>
+<p>In der App unter <span class="pfad">Konto → Konto löschen</span>. Danach beginnt eine
+<strong>Frist von 30 Tagen</strong>, in der du es dir noch anders überlegen kannst —
+melde dich einfach wieder an, dann ist die Löschung abgebrochen. Nach den 30 Tagen ist
+alles endgültig weg.</p>
+
+<div class="hinweis">
+  <p>Ein laufendes Abo endet damit nicht von selbst: es gehört deiner Apple-ID, nicht
+  deinem Sextant-Konto. Also erst <a href="#kuendigen">kündigen</a>, dann löschen.</p>
+</div>
+
+<h2 id="kontakt">Kontakt</h2>
+
+<div class="karte">
+  <p><strong>E-Mail:</strong>
+  <a href="mailto:support.moneyflow.app@gmail.com">support.moneyflow.app@gmail.com</a></p>
+  <p>Antwort meist innerhalb eines Werktags. Auf Deutsch oder Englisch.</p>
+  <p>Schreib bitte dazu, welche <strong>Version</strong> du hast — sie steht in der App
+  unten unter <span class="pfad">Konto</span> — und was du getan hast, bevor es
+  schiefging. Damit ist die Hälfte der Suche schon erledigt.</p>
+</div>
+
+<div class="kernsatz">
+  <p><strong>Etwas ist dringend?</strong> Bei Zweifeln an einer Bankfreigabe wende dich
+  zuerst an deine Bank: sie kann eine Freigabe sofort widerrufen. Sextant selbst kann
+  ohnehin kein Geld bewegen.</p>
+</div>
+
+<footer>
+  <p>Sextant&nbsp;Money · <a href="hilfe.html">Hilfe</a> ·
+     <a href="datenschutz.html">Datenschutz</a> ·
+     <a href="agb.html">AGB</a> ·
+     <a href="impressum.html">Impressum</a></p>
+</footer>
+
+</div>
+</body>
+</html>

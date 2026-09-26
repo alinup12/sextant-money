@@ -6,21 +6,25 @@ Haushaltsführung für iOS.
 Veröffentlicht über GitHub Pages:
 
 - Übersicht — <https://alinup12.github.io/sextant-money/>
+- Hilfe — <https://alinup12.github.io/sextant-money/hilfe.html>
 - Datenschutz — <https://alinup12.github.io/sextant-money/datenschutz.html>
 - AGB — <https://alinup12.github.io/sextant-money/agb.html>
 - Impressum — <https://alinup12.github.io/sextant-money/impressum.html>
 
-Die Datenschutz-Adresse ist die, die in App Store Connect als Privacy Policy URL
-hinterlegt wird.
+Zwei dieser Adressen stehen in App Store Connect: `datenschutz.html` als *Privacy
+Policy URL*, `hilfe.html` als *Support URL*. Dieselbe Hilfe-Adresse steht auch in
+der App unter Konto → Support-Center (`Support.hilfe` in `Rechtliches.swift`) —
+ein Prüfer klickt beides an, also darf dort nicht Verschiedenes stehen.
 
 ## Aufbau
 
-Vier statische Seiten und ein gemeinsames Stylesheet. Keine Abhängigkeiten, kein
+Fünf statische Seiten und ein gemeinsames Stylesheet. Keine Abhängigkeiten, kein
 Build-Schritt — was hier liegt, ist was ausgeliefert wird.
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Einstieg mit den drei Dokumenten |
+| `index.html` | Einstieg mit Hilfe und den drei Dokumenten |
+| `hilfe.html` | Hilfe und Support-Kontakt (die Support-URL im App Store) |
 | `datenschutz.html` | Datenschutzerklärung (DSGVO) |
 | `agb.html` | Allgemeine Geschäftsbedingungen |
 | `impressum.html` | Offenlegung nach § 5 ECG und § 25 MedienG |
