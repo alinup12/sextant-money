@@ -1,6 +1,6 @@
-# Sextant Money — Rechtliches
+# Sextant — Rechtliches
 
-Datenschutzerklärung, AGB und Impressum der App **Sextant Money**, einer App zur
+Datenschutzerklärung, AGB und Impressum der App **Sextant**, einer App zur
 Haushaltsführung für iOS.
 
 Veröffentlicht über GitHub Pages:
